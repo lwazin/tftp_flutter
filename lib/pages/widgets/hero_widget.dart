@@ -1,5 +1,6 @@
-import 'package:carousel_slider/carousel_slider.dart';
+// import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HeroWidget extends StatefulWidget {
   const HeroWidget({Key? key}) : super(key: key);
@@ -7,15 +8,6 @@ class HeroWidget extends StatefulWidget {
   @override
   _HeroWidgetState createState() => _HeroWidgetState();
 }
-
-final List<String> imgList = [
-  'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
-  'https://images.unsplash.com/photo-1522205408450-add114ad53fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=368f45b0888aeb0b7b08e3a1084d3ede&auto=format&fit=crop&w=1950&q=80',
-  'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94a1e718d89ca60a6337a6008341ca50&auto=format&fit=crop&w=1950&q=80',
-  'https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89719a0d55dd05e2deae4120227e6efc&auto=format&fit=crop&w=1953&q=80',
-  'https://images.unsplash.com/photo-1508704019882-f9cf40e475b4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c6e5e3aba713b17aa1fe71ab4f0ae5b&auto=format&fit=crop&w=1352&q=80',
-  'https://images.unsplash.com/photo-1519985176271-adb1088fa94c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0c8d632e977f94e5d312d9893258f59&auto=format&fit=crop&w=1355&q=80'
-];
 
 class _HeroWidgetState extends State<HeroWidget> {
   @override
@@ -36,10 +28,106 @@ class _HeroWidgetState extends State<HeroWidget> {
                 color: Colors.transparent,
                 height: 740,
                 width: 1400,
-                child: Image.asset(
-                  'assets/images/hero.jpg',
-                  fit: BoxFit.cover,
-                  alignment: const Alignment(0.0, -0.25),
+                child: Row(
+                  children: [
+                    Stack(
+                      children: [
+                        Container(
+                          color: Colors.transparent,
+                          height: 740,
+                          width: 1400,
+                          child: Image.asset(
+                            'assets/images/hero.jpg',
+                            fit: BoxFit.cover,
+                            alignment: const Alignment(0.0, -0.25),
+                          ),
+                        ),
+                        Container(
+                          color: Colors.transparent,
+                          padding: const EdgeInsets.only(
+                            left: 80,
+                          ),
+                          child: Row(
+                            children: [
+                              Stack(
+                                children: [
+                                  Column(
+                                    children: [
+                                      const SizedBox(
+                                        height: 7,
+                                      ),
+                                      Text(
+                                        'IMMERSE IN \nADVENTURE',
+                                        style: GoogleFonts.oswald(
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 90,
+                                          color: Colors.white,
+                                          letterSpacing: -4.7,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Column(
+                                    children: [
+                                      const SizedBox(
+                                        height: 112,
+                                      ),
+                                      Text(
+                                        'GENUINE NORTH WESTERN',
+                                        style: GoogleFonts.oswald(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 40,
+                                          color: Colors.deepOrange,
+                                          letterSpacing: 0,
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 80,
+                                      ),
+                                      Container(
+                                        width: 380,
+                                        child: Text(
+                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                                          textAlign: TextAlign.right,
+                                          style: GoogleFonts.montserrat(
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 15,
+                                            color: Colors.white,
+                                            letterSpacing: 0,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      const SizedBox(
+                                        width: 430,
+                                      ),
+                                      Image.asset(
+                                        'assets/images/logo.png',
+                                        height: 380,
+                                        width: 380,
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                              // Text(
+                              //   'GENUINE NORTH WESTERN',
+                              //   style: GoogleFonts.oswald(
+                              //     fontWeight: FontWeight.w400,
+                              //     fontSize: 40,
+                              //     color: Colors.deepOrange,
+                              //     letterSpacing: 0,
+                              //   ),
+                              // ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ),

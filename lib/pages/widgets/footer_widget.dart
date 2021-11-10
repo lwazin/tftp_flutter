@@ -12,7 +12,7 @@ class _FooterWidgetState extends State<FooterWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 150),
+      margin: const EdgeInsets.only(top: 0),
       width: MediaQuery.of(context).size.width,
       height: 150,
       color: Colors.black87,
@@ -28,13 +28,16 @@ class _FooterWidgetState extends State<FooterWidget> {
               children: [
                 MouseRegion(
                   cursor: SystemMouseCursors.click,
-                  child: Text(
-                    'TEN FLAGS',
-                    style: GoogleFonts.bowlbyOneSc(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 35,
-                      color: Colors.white,
-                      // letterSpacing: -1.7,
+                  child: Opacity(
+                    opacity: 0.8,
+                    child: Text(
+                      'TEN FLAGS',
+                      style: GoogleFonts.bowlbyOneSc(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 35,
+                        color: Colors.deepOrange,
+                        // letterSpacing: -1.7,
+                      ),
                     ),
                   ),
                 ),
@@ -83,34 +86,43 @@ class _FooterWidgetState extends State<FooterWidget> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Downloads',
-                        textAlign: TextAlign.left,
-                        style: GoogleFonts.montserrat(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 15,
-                          color: Colors.white,
-                          // letterSpacing: 0,
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: Text(
+                          'Downloads',
+                          textAlign: TextAlign.left,
+                          style: GoogleFonts.montserrat(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 15,
+                            color: Colors.white,
+                            // letterSpacing: 0,
+                          ),
                         ),
                       ),
-                      Text(
-                        'About Us',
-                        textAlign: TextAlign.left,
-                        style: GoogleFonts.montserrat(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 15,
-                          color: Colors.white,
-                          // letterSpacing: 0,
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: Text(
+                          'About Us',
+                          textAlign: TextAlign.left,
+                          style: GoogleFonts.montserrat(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 15,
+                            color: Colors.white,
+                            // letterSpacing: 0,
+                          ),
                         ),
                       ),
-                      Text(
-                        'FAQ',
-                        textAlign: TextAlign.left,
-                        style: GoogleFonts.montserrat(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 15,
-                          color: Colors.white,
-                          // letterSpacing: 0,
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: Text(
+                          'FAQ',
+                          textAlign: TextAlign.left,
+                          style: GoogleFonts.montserrat(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 15,
+                            color: Colors.white,
+                            // letterSpacing: 0,
+                          ),
                         ),
                       ),
                     ],
@@ -143,34 +155,43 @@ class _FooterWidgetState extends State<FooterWidget> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Functions',
-                        textAlign: TextAlign.left,
-                        style: GoogleFonts.montserrat(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 15,
-                          color: Colors.white,
-                          // letterSpacing: 0,
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: Text(
+                          'Functions',
+                          textAlign: TextAlign.left,
+                          style: GoogleFonts.montserrat(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 15,
+                            color: Colors.white,
+                            // letterSpacing: 0,
+                          ),
                         ),
                       ),
-                      Text(
-                        'Partners',
-                        textAlign: TextAlign.left,
-                        style: GoogleFonts.montserrat(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 15,
-                          color: Colors.white,
-                          // letterSpacing: 0,
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: Text(
+                          'Partners',
+                          textAlign: TextAlign.left,
+                          style: GoogleFonts.montserrat(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 15,
+                            color: Colors.white,
+                            // letterSpacing: 0,
+                          ),
                         ),
                       ),
-                      Text(
-                        'Careers',
-                        textAlign: TextAlign.left,
-                        style: GoogleFonts.montserrat(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 15,
-                          color: Colors.white,
-                          // letterSpacing: 0,
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: Text(
+                          'Careers',
+                          textAlign: TextAlign.left,
+                          style: GoogleFonts.montserrat(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 15,
+                            color: Colors.white,
+                            // letterSpacing: 0,
+                          ),
                         ),
                       ),
                     ],
@@ -183,37 +204,80 @@ class _FooterWidgetState extends State<FooterWidget> {
             width: 250,
             height: 250,
             color: Colors.transparent,
-            padding: const EdgeInsets.only(top: 24),
+            padding: const EdgeInsets.only(top: 22),
             child: Column(
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 2),
-                      child: Image.asset(
-                        "assets/icons/facebook.png",
-                        color: Colors.deepOrange,
-                        height: 35,
-                        width: 35,
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(5),
+                        bottomLeft: Radius.circular(5),
+                      ),
+                      child: Container(
+                        width: 200,
+                        height: 30,
+                        color: Colors.grey,
                       ),
                     ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 2),
-                      child: Image.asset(
-                        "assets/icons/twitter.png",
-                        color: Colors.deepOrange,
-                        height: 35,
-                        width: 35,
+                    Opacity(
+                      opacity: 0.8,
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.only(
+                          topRight: Radius.circular(5),
+                          bottomRight: Radius.circular(5),
+                        ),
+                        child: Container(
+                          width: 50,
+                          height: 30,
+                          color: Colors.deepOrange,
+                        ),
                       ),
                     ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 2),
-                      child: Image.asset(
-                        "assets/icons/instagram.png",
-                        color: Colors.deepOrange,
-                        height: 35,
-                        width: 35,
+                  ],
+                ),
+                const SizedBox(
+                  height: 13,
+                ),
+                Row(
+                  // mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 2),
+                        child: Image.asset(
+                          "assets/icons/facebook.png",
+                          color: Colors.grey,
+                          height: 30,
+                          width: 30,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 2),
+                        child: Image.asset(
+                          "assets/icons/twitter.png",
+                          color: Colors.grey,
+                          height: 30,
+                          width: 30,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 2),
+                        child: Image.asset(
+                          "assets/icons/instagram.png",
+                          color: Colors.grey,
+                          height: 30,
+                          width: 30,
+                        ),
                       ),
                     ),
                   ],

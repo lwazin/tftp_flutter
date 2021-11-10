@@ -21,6 +21,7 @@ class _HeroWidgetState extends State<HeroWidget> {
           Container(
             margin: const EdgeInsets.only(
               top: 130,
+              bottom: 15,
             ),
             child: Stack(
               children: const [
@@ -174,8 +175,8 @@ class _HeroContentState extends State<HeroContent> {
       color: Colors.transparent,
       width: 1400,
       margin: const EdgeInsets.only(
-        bottom: 25,
-      ),
+          // bottom: 25,
+          ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

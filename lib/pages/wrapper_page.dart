@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'widgets/feature_widget.dart';
-// import 'widgets/hero_widget.dart';
+import 'widgets/feature_widget.dart';
+import 'widgets/hero_widget.dart';
 import 'widgets/footer_widget.dart';
 import 'widgets/navbar_widget.dart';
 
@@ -21,8 +21,8 @@ class _WrapperPageState extends State<WrapperPage> {
           SingleChildScrollView(
             child: Column(
               children: const [
-                // HeroWidget(),
-                // FeatureWidget(),
+                HeroWidget(),
+                FeatureWidget(),
                 FooterWidget(),
               ],
             ),

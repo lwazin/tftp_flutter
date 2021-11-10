@@ -174,7 +174,7 @@ class _HeroContentState extends State<HeroContent> {
       color: Colors.transparent,
       width: 1400,
       margin: const EdgeInsets.only(
-        bottom: 40,
+        bottom: 25,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -295,7 +295,7 @@ class _HeroContentState extends State<HeroContent> {
                       child: Column(
                         children: [
                           Text(
-                            'GROUP PAKAGES',
+                            'GROUP PACKAGES',
                             style: GoogleFonts.oswald(
                               fontWeight: FontWeight.w700,
                               fontSize: 40,

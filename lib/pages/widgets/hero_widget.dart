@@ -247,7 +247,36 @@ class _HeroContentState extends State<HeroContent> {
                             ),
                           ],
                         ),
-                      )
+                      ),
+                      Container(
+                          width: MediaQuery.of(context).size.width,
+                          // height: 50,
+                          color: Colors.transparent,
+                          child: Column(
+                            children: [
+                              Text(
+                                'GROUP PAKAGES',
+                                style: GoogleFonts.oswald(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 40,
+                                  color: Colors.black,
+                                  letterSpacing: -1.7,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                'Find the right experience for your friends & family to enjoy!',
+                                style: GoogleFonts.montserrat(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 15,
+                                  color: Colors.black,
+                                  letterSpacing: 0,
+                                ),
+                              ),
+                            ],
+                          ))
                     ],
                   ),
                 ),
